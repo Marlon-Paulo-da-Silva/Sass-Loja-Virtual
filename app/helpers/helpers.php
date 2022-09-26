@@ -8,6 +8,11 @@
     return BASE_URL;
   }
 
+  function media()
+  {
+    return BASE_URL . "assets";
+  }
+
   function dep($data)
   {
     $format = print_r('<br><br><pre>');
