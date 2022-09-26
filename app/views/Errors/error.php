@@ -8,5 +8,6 @@
 </head>
 <body>
   <h1>Pagina não encontrada</h1>
+  <?= base_url(); ?>
 </body>
 </html>
