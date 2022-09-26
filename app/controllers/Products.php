@@ -1,12 +1,12 @@
 <?php
-class Home extends Controllers {
+class Products extends Controllers {
 
   public function __construct()
   {
     parent::__construct();
   }
 
-  public function Home(){
+  public function products(){
     $data['tag_page'] = "Home";
     $data['page_title'] = "Página principal";
     $data['page_name'] = "home";

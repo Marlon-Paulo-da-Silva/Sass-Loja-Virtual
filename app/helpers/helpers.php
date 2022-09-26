@@ -1,5 +1,7 @@
 <?php
   require_once("app/helpers/uri.php");
+  require_once("app/helpers/userLogged.php");
+  require_once("app/helpers/verifyLogin.php");
 
   function base_url()
   {
