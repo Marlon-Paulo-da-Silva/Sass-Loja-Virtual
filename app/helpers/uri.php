@@ -40,8 +40,8 @@ class URI {
        * Faz a verificação se for
        * diferente de https
        */
-    //   if(strpos(strtolower($_SERVER['SERVER_PROTOCOL']),'https') === false)
-      if($_SERVER['REQUEST_SCHEME'] === "http")
+      if(strpos(strtolower($_SERVER['SERVER_PROTOCOL']),'https') === false)
+    //   if($_SERVER['REQUEST_SCHEME'] === "http")
       {
           self::$protocolo = 'http://'; //Atribui o valor http
       }
@@ -53,6 +53,8 @@ class URI {
        * Retorna o protocolo em formato string
        * @var string
        */
+
+    //    echo print_r($_SERVER);
       return self::$protocolo;
   }
   /**
@@ -127,5 +129,21 @@ class URI {
        */
       return self::$finalBase;
   }
+
+  public function domain()
+  {
+      //Concatena os valores
+      self::$finalBase = self::Protocolo() . self::Host() . self::scriptName();
+      /**
+       * Retorna toda a url construida em formato string
+       * @var string
+       */
+      return self::Host();
   }
+
+  public function dir()
+  {
+      return self::scriptName();
+  }
+}
 ?>

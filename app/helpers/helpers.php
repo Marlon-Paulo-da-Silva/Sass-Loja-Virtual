@@ -8,9 +8,26 @@
     return BASE_URL;
   }
 
+  function domain()
+  {
+    $domain = new URI();
+    return $domain->domain();
+  }
+
+  function diretories()
+  {
+    $dir = new URI();
+    return $dir->dir();
+  }
+
   function media()
   {
     return BASE_URL . "assets";
+  }
+
+  function frontAssets($modelSite)
+  {
+    return base_url() . "app/templates/site/".$modelSite."/";
   }
 
   function dep($data)

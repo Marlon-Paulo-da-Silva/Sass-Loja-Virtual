@@ -2,6 +2,14 @@
 $url = !empty($_GET['url']) ? $_GET['url'] : 'home/home';
 $arrUrl = explode("/", $url);
 
+// print_r($arrUrl);
+
+// echo "<br><br><br>".domain();
+
+// die();
+
+$module = "site";
+
 $controller = $arrUrl[0];
 $method = $arrUrl[0];
 

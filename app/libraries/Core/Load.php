@@ -1,8 +1,34 @@
 <?php
   //Load
-
+  
   $controller = ucwords($controller);
-  $controllerFile = "app/controllers/" . $controller .".php";
+  $module = ucwords($module);
+  $method = ucwords($method);
+
+  echo $module;
+  echo "<br>";
+  echo $controller;
+  echo "<br>";
+  echo $method;
+  echo "<br>";
+  echo $params;
+  echo "<br>";
+  print_r($arrUrl);
+  echo "<br>";
+  // die();
+
+  if($controller == "sistema"){
+    echo "sistema";
+    $controller = "System";
+    // if(){
+
+    // }
+    $controllerFile = "app/controllers/" . $controller ."/" . $method .".php";
+    die();
+  }
+
+  $controllerFile = "app/controllers/". $module . "/" . $controller .".php";
+
   if (file_exists($controllerFile)) {
     // echo $controllerFile;
     require_once($controllerFile);

@@ -21,14 +21,11 @@
       require_once($view);
     }
     
-    function getViewStore($controller, $view, $data = ""){
-      $controller = get_class($controller);
-      if($controller == "Home"){
-        // $view = "app/templates/store/".$view.".php";
-        $view = "app/templates/store/index.php";
-      } else {
-        $view = "app/views/".$controller."/".$view.".php";
-      }
+    function getViewSite($modelSite, $view, $data = ""){
+    
+      $view = "app/templates/site/" . $modelSite . "/" . $view.".php";
+      // echo $view;
+      // die();
       require_once($view);
     }
   }

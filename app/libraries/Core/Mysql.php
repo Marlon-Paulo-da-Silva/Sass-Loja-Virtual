@@ -49,7 +49,7 @@
       return $data;
     }
 
-    public function update(string $query = '', array $arrValues){
+    public function update($query, array $arrValues){
       $this->strQuery = $query;
       $this->arrValues = $arrValues;
 
